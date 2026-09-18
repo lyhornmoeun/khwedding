@@ -1,1 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongkul Serei | Budget Wedding Planning & Marketplace - Siem Reap & Cambodia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Kantumruy+Pro:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cambodia-gold': '#D4AF37',
+                        'champagne': '#F7E7CE',
+                        'blush': '#F9ECE8',
+                        'deep-rose': '#A3485E',
+                        'lotus': '#E892A2',
+                        'temple-stone': '#2F2E2E',
+                        'cream': '#FDFBF7'
+                    },
+                    fontFamily: {
+                        'sans': ['"Plus Jakarta Sans"', '"Kantumruy Pro"', 'sans-serif'],
+                        'serif': ['"Cinzel"', '"Kantumruy Pro"', 'serif'],
+                        'khmer': ['"Kantumruy Pro"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #A3485E 0%, #D4AF37 50%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .lotus-pattern {
+            background-color: #FDFBF7;
+            background-image: radial-gradient(#d4af3718 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #e2c079;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-cream text-stone-800 font-sans antialiased selection:bg-rose-100 selection:text-deep-rose">
 
+    <!-- Top Bar for Announcements & Currency Selection -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-rose-100/80 shadow-xs">
+        <div class="bg-gradient-to-r from-deep-rose to-stone-900 text-white text-xs py-1.5 px-4">
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+                <div class="flex items-center space-x-2">
+                    <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>🇰🇭 Special 2026 Siem Reap Wedding Season: Save up to $1,200 with local artisan packages!</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="hidden sm:inline text-rose-200">Offices: Phnom Penh (BKK1) & Siem Reap (Wat Bo)</span>
+                    <div class="flex items-center space-x-1 bg-white/10 px-2 py-0.5 rounded-full border border-white/20">
+                        <span class="text-[11px] font-medium text-stone-200 mr-1">Currency:</span>
+                        <button id="curr-usd" onclick="setCurrency('USD')" class="px-1.5 py-0.5 rounded text-[11px] font-bold bg-amber-400 text-stone-900 transition shadow-xs">USD ($)</button>
+                        <button id="curr-khr" onclick="setCurrency('KHR')" class="px-1.5 py-0.5 rounded text-[11px] font-medium text-stone-300 hover:text-white transition">KHR (៛)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation Bar -->
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-deep-rose to-cambodia-gold flex items-center justify-center text-white text-lg shadow-md group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-ring"></i>
+                </div>
+                <div>
+                    <div class="flex items-center space-x-1.5">
+                        <span class="font-serif font-bold text-xl tracking-tight text-stone-900">Mongkul Serei</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-amber-50 text-cambodia-gold font-semibold border border-amber-200">មង្គលសិរី</span>
+                    </div>
+                    <p class="text-[10px] text-stone-500 uppercase tracking-widest font-medium">Smart Budget Weddings for Modern Cambodia</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-stone-700">
+                <a href="#packages" class="hover:text-deep-rose transition">All-In Packages</a>
+                <a href="#calculator" class="hover:text-deep-rose transition">Budget Calculator</a>
+                <a href="#marketplace" class="hover:text-deep-rose transition">Vendor Marketplace</a>
+                <a href="#crm" class="hover:text-deep-rose transition">Couple's CRM & RSVP</a>
+                <a href="#traditions" class="hover:text-deep-rose transition">Ceremony Guide</a>
+                <a href="#testimonials" class="hover:text-deep-rose transition">Real Stories</a>
+            </div>
+
+            <div class="flex items-center space-x-3">
+                <a href="#inquire" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-full text-white bg-gradient-to-r from-deep-rose to-rose-700 hover:shadow-lg hover:shadow-rose-900/20 transition-all">
+                    <span>Plan My Wedding</span>
+                    <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </a>
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-stone-600 hover:text-stone-900 hover:bg-stone-100">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#packages" onclick="toggleMobileMenu()" class="block py-2 text-stone-700 font-medium">All-In Packages</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 text-stone-700 font-medium">Budget Calculator</a>
+            <a href="#marketplace" onclick="toggleMobileMenu()" class="block py-2 text-stone-700 font-medium">Vendor Marketplace</a>
+            <a href="#crm" onclick="toggleMobileMenu()" class="block py-2 text-stone-700 font-medium">Couple's CRM & Guestlist</a>
+            <a href="#traditions" onclick="toggleMobileMenu()" class="block py-2 text-stone-700 font-medium">Ceremony Guide</a>
+            <a href="#testimonials" onclick="toggleMobileMenu()" class="block py-2 text-stone-700 font-medium">Real Stories</a>
+            <a href="#inquire" onclick="toggleMobileMenu()" class="block text-center py-2.5 rounded-full bg-deep-rose text-white font-semibold shadow-sm">Free Consultation Form</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-24 bg-gradient-to-b from-white via-blush/40 to-cream">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-200/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-24 w-80 h-80 bg-rose-200/40 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-rose-50 border border-rose-200/80 px-3 py-1 rounded-full text-xs font-semibold text-deep-rose">
+                        <i class="fa-solid fa-gem text-cambodia-gold"></i>
+                        <span>Tailored for couples living in Phnom Penh, Battambang & Beyond</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-stone-900 leading-tight">
+                        A Meaningful Khmer Wedding in <span class="gold-gradient-text">Siem Reap</span> Without the Crippling Debt.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-stone-600 leading-relaxed font-light">
+                        Honor your parents with full traditional rites (<span class="font-khmer font-medium text-stone-800">ហែជំនូន, កាត់សក់, ពិធីសំពះផ្ទឹម</span>) and celebrate with modern elegance. Full boutique packages from <strong class="text-deep-rose font-semibold price-tag" data-usd="2499">$2,499</strong> — up to 60% less than conventional Phnom Penh ballroom weddings.
+                    </p>
+
+                    <!-- Quick Value Badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                        <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-white/80 border border-stone-200/60 shadow-2xs">
+                            <div class="text-cambodia-gold"><i class="fa-solid fa-hand-holding-dollar text-lg"></i></div>
+                            <div class="text-xs">
+                                <p class="font-bold text-stone-900">Zero Debt Mission</p>
+                                <p class="text-stone-500">Flexible 3-stage payments</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-white/80 border border-stone-200/60 shadow-2xs">
+                            <div class="text-deep-rose"><i class="fa-solid fa-scroll text-lg"></i></div>
+                            <div class="text-xs">
+                                <p class="font-bold text-stone-900">Full Rites Master</p>
+                                <p class="text-stone-500">Traditional Achar included</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2.5 p-2.5 rounded-xl bg-white/80 border border-stone-200/60 shadow-2xs col-span-2 sm:col-span-1">
+                            <div class="text-emerald-600"><i class="fa-solid fa-map-location-dot text-lg"></i></div>
+                            <div class="text-xs">
+                                <p class="font-bold text-stone-900">Siem Reap Magic</p>
+                                <p class="text-stone-500">Lush gardens & boutique resorts</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call To Actions -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
+                        <a href="#calculator" class="px-6 py-3.5 rounded-full bg-deep-rose hover:bg-rose-700 text-white font-semibold text-center shadow-md hover:shadow-rose-800/20 transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-calculator"></i>
+                            <span>Calculate Your Custom Budget</span>
+                        </a>
+                        <a href="#marketplace" class="px-6 py-3.5 rounded-full bg-white hover:bg-stone-50 text-stone-800 font-semibold text-center border border-stone-300 shadow-2xs transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-store"></i>
+                            <span>Browse Verified Vendors</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Destination Showcase Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl p-3 bg-gradient-to-br from-amber-200/60 via-white to-rose-200/60 shadow-2xl border border-white">
+                        <div class="relative rounded-2xl overflow-hidden aspect-4/3 bg-stone-100 shadow-inner group">
+                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Cambodian Traditional Wedding Setting" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                 onerror="this.src='https://placehold.co/800x600/f3e8ff/831843?text=Cambodian+Wedding'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/20 to-transparent flex flex-col justify-end p-6 text-white">
+                                <div class="flex items-center space-x-2 text-cambodia-gold text-xs font-semibold uppercase tracking-wider mb-1">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Siem Reap Garden Ceremony</span>
+                                </div>
+                                <h3 class="text-xl font-serif font-bold">The Heritage Lotus Wedding</h3>
+                                <p class="text-stone-200 text-xs mt-1">Host 10 to 25 tables in romantic private villas near Angkor with authentic Khmer morning rites and twilight cocktail dining.</p>
+                                <div class="mt-3 flex items-center justify-between pt-2 border-t border-white/20 text-xs">
+                                    <span class="text-stone-300">All-Inclusive from</span>
+                                    <span class="text-lg font-bold text-amber-300 price-tag" data-usd="3200">$3,200</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Micro-Badge -->
+                        <div class="absolute -bottom-4 -left-4 bg-white p-3 rounded-2xl shadow-xl border border-rose-100 flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-piggy-bank"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-stone-500 font-medium">Average Savings</p>
+                                <p class="text-sm font-bold text-stone-900 price-tag" data-usd="2800">$2,800 saved</p>
+                            </div>
+                        </div>
+
+                        <div class="absolute -top-3 -right-3 bg-white px-3 py-1.5 rounded-full shadow-lg border border-amber-200 flex items-center space-x-1.5 text-xs text-amber-900 font-semibold">
+                            <i class="fa-solid fa-star text-amber-500"></i>
+                            <span>4.9/5 (450+ Couples)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Figures Section -->
+    <section class="border-y border-stone-200/80 bg-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-2xl bg-cream border border-stone-200/60">
+                    <p class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-deep-rose">450+</p>
+                    <p class="text-xs sm:text-sm font-semibold text-stone-800 mt-1">Weddings Arranged</p>
+                    <p class="text-[11px] text-stone-500 mt-0.5">Across Siem Reap, PP & Battambang</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-cream border border-stone-200/60">
+                    <p class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-cambodia-gold price-tag" data-usd="2850">$2,850</p>
+                    <p class="text-xs sm:text-sm font-semibold text-stone-800 mt-1">Avg. Debt Avoided</p>
+                    <p class="text-[11px] text-stone-500 mt-0.5">Per young Cambodian couple</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-cream border border-stone-200/60">
+                    <p class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-stone-900">85+</p>
+                    <p class="text-xs sm:text-sm font-semibold text-stone-800 mt-1">Vetted Local Vendors</p>
+                    <p class="text-[11px] text-stone-500 mt-0.5">Florists, Achars, Pinpeat, Caterers</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-cream border border-stone-200/60">
+                    <p class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-emerald-600">98.4%</p>
+                    <p class="text-xs sm:text-sm font-semibold text-stone-800 mt-1">Family Approval Rate</p>
+                    <p class="text-[11px] text-stone-500 mt-0.5">Strict adherence to sacred traditions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Packages Section -->
+    <section id="packages" class="py-16 bg-cream lotus-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-deep-rose bg-rose-100/70 px-3 py-1 rounded-full">Transparent Pricing</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-3">Curated Packages Designed for Modest Incomes</h2>
+                <p class="text-sm sm:text-base text-stone-600 mt-2">
+                    No hidden "farang" markups, no unexpected guest fees. Each package includes legal coordination, day-of wedding director, and authentic Khmer ceremony setups.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Package 1: Romdoul Essential -->
+                <div class="bg-white rounded-3xl border border-stone-200 p-6 flex flex-col justify-between hover:shadow-xl transition-all relative">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-semibold text-stone-500 uppercase">Intimate Gathering</span>
+                                <h3 class="text-xl font-bold font-serif text-stone-900">Romdoul Essential</h3>
+                                <p class="text-xs text-stone-500 font-khmer">កញ្ចប់ផ្ការំដួល (៥ - ៨ តុ)</p>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-stone-100 text-stone-700 font-medium">50-80 Guests</span>
+                        </div>
+                        <div class="pt-2 border-t border-stone-100">
+                            <span class="text-3xl font-serif font-bold text-stone-900 price-tag" data-usd="1899">$1,899</span>
+                            <span class="text-xs text-stone-500">/ all-inclusive</span>
+                        </div>
+                        <p class="text-xs text-stone-600 leading-relaxed">
+                            Ideal for young couples who want traditional blessing ceremonies at home or a boutique villa in Siem Reap with closest family.
+                        </p>
+                        <ul class="text-xs space-y-2.5 text-stone-700 pt-2">
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Morning Traditional Ceremony Master (Achar)</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Sampot Chang Kben & Groom Attire (2 changes)</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Khmer Traditional Flower Backdrop & Rings Pillow</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>6 Banquet Tables with authentic Siem Reap menu</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Full Day Photographer (Digital Gallery + USB)</span></li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-stone-100">
+                        <button onclick="selectPackage('Romdoul Essential', 1899)" class="w-full py-2.5 rounded-full border border-deep-rose text-deep-rose hover:bg-deep-rose hover:text-white font-semibold text-sm transition text-center">
+                            Select This Package
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Package 2: Angkor Bliss (Most Popular) -->
+                <div class="bg-white rounded-3xl border-2 border-cambodia-gold p-6 flex flex-col justify-between shadow-xl relative scale-105 z-10">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-deep-rose to-cambodia-gold text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                        Most Popular Choice
+                    </div>
+                    <div class="space-y-4 pt-2">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-semibold text-cambodia-gold uppercase">Complete Celebration</span>
+                                <h3 class="text-xl font-bold font-serif text-stone-900">Angkor Heritage Bliss</h3>
+                                <p class="text-xs text-stone-500 font-khmer">កញ្ចប់មង្គលអង្គរ (១០ - ១៦ តុ)</p>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-amber-50 text-cambodia-gold font-bold">100-160 Guests</span>
+                        </div>
+                        <div class="pt-2 border-t border-stone-100">
+                            <span class="text-3xl font-serif font-bold text-deep-rose price-tag" data-usd="3299">$3,299</span>
+                            <span class="text-xs text-stone-500">/ all-inclusive</span>
+                        </div>
+                        <p class="text-xs text-stone-600 leading-relaxed">
+                            Full day ceremony with morning fruit procession (Hae Neak Ta), hair cutting (Pithi Kat Sok), and evening dinner with live acoustic band.
+                        </p>
+                        <ul class="text-xs space-y-2.5 text-stone-700 pt-2">
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Boutique Siem Reap Resort garden lawn rental</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Full 4-Outfit Traditional & Modern Wardrobe</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>12 Deluxe Tables (7-course feast + soft drinks)</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Live Khmer Pinpeat (Morning) & Acoustic Duo (Evening)</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>2 Photographers + Cinematic Highlight Film</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Dedicated Day-Of Onsite Wedding Coordinator</span></li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-stone-100">
+                        <button onclick="selectPackage('Angkor Heritage Bliss', 3299)" class="w-full py-2.5 rounded-full bg-deep-rose text-white hover:bg-rose-800 font-semibold text-sm transition text-center shadow-md">
+                            Select This Package
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Package 3: Golden Jasmine -->
+                <div class="bg-white rounded-3xl border border-stone-200 p-6 flex flex-col justify-between hover:shadow-xl transition-all relative">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-semibold text-stone-500 uppercase">Grand Provincial</span>
+                                <h3 class="text-xl font-bold font-serif text-stone-900">Golden Jasmine Grand</h3>
+                                <p class="text-xs text-stone-500 font-khmer">កញ្ចប់ផ្កាម្លិះមាស (២០ - ៣០ តុ)</p>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-stone-100 text-stone-700 font-medium">200-300 Guests</span>
+                        </div>
+                        <div class="pt-2 border-t border-stone-100">
+                            <span class="text-3xl font-serif font-bold text-stone-900 price-tag" data-usd="4950">$4,950</span>
+                            <span class="text-xs text-stone-500">/ all-inclusive</span>
+                        </div>
+                        <p class="text-xs text-stone-600 leading-relaxed">
+                            For couples with large extended families in Battambang or Siem Reap, delivering large ballroom scale at 40% normal budget.
+                        </p>
+                        <ul class="text-xs space-y-2.5 text-stone-700 pt-2">
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>25 Banquet Tables with premium seafood & beef loc lak</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Full 6 Outfits (Bride & Groom + Parents attire)</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Luxury Grand Floral Arch & Entrance Tunnel</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Full Sound & Lighting System + 4-piece Live Band</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-500"></i><span>Drone Videography + Instant Photo Print Booth</span></li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-stone-100">
+                        <button onclick="selectPackage('Golden Jasmine Grand', 4950)" class="w-full py-2.5 rounded-full border border-deep-rose text-deep-rose hover:bg-deep-rose hover:text-white font-semibold text-sm transition text-center">
+                            Select This Package
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Budget Calculator -->
+    <section id="calculator" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-cambodia-gold bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">Interactive Planning Tool</span>
+                <h2 class="text-3xl font-serif font-bold text-stone-900 mt-2">Cambodian Wedding Budget Calculator</h2>
+                <p class="text-sm text-stone-600 mt-1">
+                    Calculate your exact wedding expenses based on guest count, ceremonies, and table configurations. See real-time savings versus standard market prices.
+                </p>
+            </div>
+
+            <div class="bg-cream rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Left Controls -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Guest Count Slider -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-sm font-semibold text-stone-800">Total Tables & Guests</label>
+                            <span class="text-xs font-bold text-deep-rose bg-rose-50 px-2.5 py-1 rounded-full border border-rose-100">
+                                <span id="calc-table-display">12</span> Tables (~<span id="calc-guest-display">120</span> Guests)
+                            </span>
+                        </div>
+                        <input type="range" id="calc-tables" min="4" max="35" value="12" class="w-full accent-deep-rose cursor-pointer" oninput="calculateBudget()">
+                        <div class="flex justify-between text-[11px] text-stone-400 mt-1 font-medium">
+                            <span>4 Tables (Intimate)</span>
+                            <span>15 Tables (Standard)</span>
+                            <span>35 Tables (Grand)</span>
+                        </div>
+                    </div>
+
+                    <!-- Ceremony Type -->
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-800 mb-2">Ceremony Scope</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="flex items-center p-3 rounded-xl border border-stone-300 bg-white cursor-pointer hover:border-deep-rose transition has-[:checked]:border-deep-rose has-[:checked]:bg-rose-50/50">
+                                <input type="radio" name="ceremony_type" value="morning_evening" checked class="text-deep-rose focus:ring-deep-rose" onchange="calculateBudget()">
+                                <div class="ml-3">
+                                    <span class="block text-xs font-bold text-stone-900">Traditional + Evening Reception</span>
+                                    <span class="block text-[11px] text-stone-500">Morning Rites + Full Evening Dinner</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-3 rounded-xl border border-stone-300 bg-white cursor-pointer hover:border-deep-rose transition has-[:checked]:border-deep-rose has-[:checked]:bg-rose-50/50">
+                                <input type="radio" name="ceremony_type" value="reception_only" class="text-deep-rose focus:ring-deep-rose" onchange="calculateBudget()">
+                                <div class="ml-3">
+                                    <span class="block text-xs font-bold text-stone-900">Modern Reception Only</span>
+                                    <span class="block text-[11px] text-stone-500">Dinner party & cocktail celebration</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Catering Tier -->
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-800 mb-2">Catering / Banquet Quality</label>
+                        <select id="calc-catering-tier" class="w-full text-xs sm:text-sm p-3 rounded-xl border border-stone-300 bg-white focus:outline-none focus:border-deep-rose" onchange="calculateBudget()">
+                            <option value="110">Classic Khmer Banquet ($110 / table - 6 dishes + dessert)</option>
+                            <option value="145" selected>Siem Reap Heritage Feast ($145 / table - 7 courses with local specialties)</option>
+                            <option value="190">Luxury Royal Khmer & BBQ ($190 / table - 8 courses + freeflow draught beer)</option>
+                        </select>
+                    </div>
+
+                    <!-- Optional Add-ons -->
+                    <div>
+                        <label class="block text-sm font-semibold text-stone-800 mb-2">Optional Services</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+                            <label class="flex items-center p-2.5 rounded-lg bg-white border border-stone-200 cursor-pointer">
+                                <input type="checkbox" id="addon-video" checked class="rounded text-deep-rose focus:ring-deep-rose" onchange="calculateBudget()">
+                                <span class="ml-2 text-stone-700">Cinematic Drone & Video (+$280)</span>
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg bg-white border border-stone-200 cursor-pointer">
+                                <input type="checkbox" id="addon-music" checked class="rounded text-deep-rose focus:ring-deep-rose" onchange="calculateBudget()">
+                                <span class="ml-2 text-stone-700">Live Acoustic & Pinpeat (+$220)</span>
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg bg-white border border-stone-200 cursor-pointer">
+                                <input type="checkbox" id="addon-bus" class="rounded text-deep-rose focus:ring-deep-rose" onchange="calculateBudget()">
+                                <span class="ml-2 text-stone-700">Guest Shuttle Bus from Phnom Penh (+$320)</span>
+                            </label>
+                            <label class="flex items-center p-2.5 rounded-lg bg-white border border-stone-200 cursor-pointer">
+                                <input type="checkbox" id="addon-makeup" checked class="rounded text-deep-rose focus:ring-deep-rose" onchange="calculateBudget()">
+                                <span class="ml-2 text-stone-700">VIP Bridal & Family Makeup (+$160)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Live Estimate Summary -->
+                <div class="lg:col-span-5 bg-white rounded-2xl p-6 border border-stone-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+                            <h3 class="font-serif font-bold text-base text-stone-900">Estimated Cost Breakdown</h3>
+                            <span class="text-[11px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">Budget Safe</span>
+                        </div>
+
+                        <div class="space-y-3 py-4 text-xs">
+                            <div class="flex justify-between text-stone-600">
+                                <span>Catering & Drinks (<span id="calc-table-sub">12</span> tables):</span>
+                                <span class="font-semibold text-stone-900" id="cost-catering">$1,740</span>
+                            </div>
+                            <div class="flex justify-between text-stone-600">
+                                <span>Venue & Tent Setup:</span>
+                                <span class="font-semibold text-stone-900" id="cost-venue">$450</span>
+                            </div>
+                            <div class="flex justify-between text-stone-600">
+                                <span>Traditional Rites, Achar & Attire:</span>
+                                <span class="font-semibold text-stone-900" id="cost-ceremony">$520</span>
+                            </div>
+                            <div class="flex justify-between text-stone-600">
+                                <span>Photography & Selected Add-ons:</span>
+                                <span class="font-semibold text-stone-900" id="cost-addons">$660</span>
+                            </div>
+                            <div class="flex justify-between text-stone-600">
+                                <span>Planning Coordination & Staff:</span>
+                                <span class="font-semibold text-stone-900" id="cost-coord">$250</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-stone-50 rounded-xl space-y-1.5 border border-stone-200/80">
+                            <div class="flex justify-between items-baseline">
+                                <span class="text-xs text-stone-500 font-medium">Standard Hotel Ballroom Cost:</span>
+                                <span class="text-xs line-through text-stone-400 font-semibold" id="market-cost">$6,200</span>
+                            </div>
+                            <div class="flex justify-between items-baseline">
+                                <span class="text-xs font-bold text-stone-800">Mongkul Serei Total:</span>
+                                <span class="text-2xl font-bold font-serif text-deep-rose" id="total-cost">$3,620</span>
+                            </div>
+                            <div class="text-[11px] text-emerald-600 font-bold text-right">
+                                You Save: <span id="total-savings">$2,580 (41%)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 space-y-2">
+                        <button onclick="applyCalculatorToInquiry()" class="w-full py-3 rounded-full bg-deep-rose hover:bg-rose-700 text-white font-semibold text-xs uppercase tracking-wider transition shadow-md flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <span>Lock in This Budget Quote</span>
+                        </button>
+                        <p class="text-[11px] text-center text-stone-400">Fixed rate guarantee: no price inflation upon booking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vendor Marketplace Section -->
+    <section id="marketplace" class="py-16 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-deep-rose bg-rose-100/70 px-3 py-1 rounded-full">Fair Price Guarantee</span>
+                    <h2 class="text-3xl font-serif font-bold text-stone-900 mt-2">Vetted Local Artisan Marketplace</h2>
+                    <p class="text-sm text-stone-600 mt-1">Direct bookings with trusted vendors in Siem Reap, Phnom Penh, and Battambang.</p>
+                </div>
+
+                <!-- Category Filter Pills -->
+                <div class="flex flex-wrap gap-1.5 p-1 bg-white rounded-full border border-stone-200 self-start">
+                    <button onclick="filterVendors('all')" class="vendor-filter active px-3 py-1.5 rounded-full text-xs font-semibold bg-deep-rose text-white transition" data-category="all">All</button>
+                    <button onclick="filterVendors('attire')" class="vendor-filter px-3 py-1.5 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 transition" data-category="attire">Attire & Makeup</button>
+                    <button onclick="filterVendors('catering')" class="vendor-filter px-3 py-1.5 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 transition" data-category="catering">Catering & Tables</button>
+                    <button onclick="filterVendors('photo')" class="vendor-filter px-3 py-1.5 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 transition" data-category="photo">Photo & Video</button>
+                    <button onclick="filterVendors('decor')" class="vendor-filter px-3 py-1.5 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 transition" data-category="decor">Floral & Arch</button>
+                    <button onclick="filterVendors('music')" class="vendor-filter px-3 py-1.5 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 transition" data-category="music">Traditional Rites</button>
+                </div>
+            </div>
+
+            <!-- Vendor Cards Grid -->
+            <div id="vendor-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Vendor 1: Attire -->
+                <div class="vendor-card bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition group" data-category="attire">
+                    <div class="relative h-48 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80" 
+                             alt="Traditional Khmer Wedding Costumes" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/fff1f2/9f1239?text=Khmer+Attire'">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-bold text-stone-800 px-2.5 py-1 rounded-full">Attire & Makeup</span>
+                        <span class="absolute bottom-3 right-3 bg-stone-900/80 text-white text-xs font-semibold px-2 py-0.5 rounded">Siem Reap / PP</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-stone-900 font-serif">Sovannaphum Bridal Studio</h3>
+                                <p class="text-xs text-stone-500 font-khmer">សំអាងការ សុវណ្ណភូមិ</p>
+                            </div>
+                            <div class="flex items-center text-xs text-amber-500 font-bold">
+                                <i class="fa-solid fa-star mr-1"></i>4.9
+                            </div>
+                        </div>
+                        <p class="text-xs text-stone-600 line-clamp-2">Authentic silk sampot chang kben, hand-beaded bridal crowns, and certified traditional hair artisans.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-stone-100">
+                            <div>
+                                <span class="text-[11px] text-stone-400">Starting from</span>
+                                <p class="text-sm font-bold text-deep-rose price-tag" data-usd="280">$280 / couple</p>
+                            </div>
+                            <button onclick="openVendorModal('Sovannaphum Bridal Studio', 'Attire & Makeup', 280, 'Siem Reap / Phnom Penh')" class="px-3 py-1.5 rounded-full bg-stone-100 hover:bg-rose-50 hover:text-deep-rose text-xs font-semibold transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vendor 2: Catering -->
+                <div class="vendor-card bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition group" data-category="catering">
+                    <div class="relative h-48 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80" 
+                             alt="Khmer Banquet Feast" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/fef3c7/92400e?text=Khmer+Catering'">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-bold text-stone-800 px-2.5 py-1 rounded-full">Catering</span>
+                        <span class="absolute bottom-3 right-3 bg-stone-900/80 text-white text-xs font-semibold px-2 py-0.5 rounded">Siem Reap</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-stone-900 font-serif">Krousar Siem Reap Catering</h3>
+                                <p class="text-xs text-stone-500 font-khmer">ចុងភៅភូមិយើង សៀមរាប</p>
+                            </div>
+                            <div class="flex items-center text-xs text-amber-500 font-bold">
+                                <i class="fa-solid fa-star mr-1"></i>4.95
+                            </div>
+                        </div>
+                        <p class="text-xs text-stone-600 line-clamp-2">Authentic regional banquet: Fish Amok, Siem Reap cured pork belly, green mango beef salad, sweet taro dessert.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-stone-100">
+                            <div>
+                                <span class="text-[11px] text-stone-400">Starting from</span>
+                                <p class="text-sm font-bold text-deep-rose price-tag" data-usd="115">$115 / table</p>
+                            </div>
+                            <button onclick="openVendorModal('Krousar Siem Reap Catering', 'Catering & Banquet', 115, 'Siem Reap')" class="px-3 py-1.5 rounded-full bg-stone-100 hover:bg-rose-50 hover:text-deep-rose text-xs font-semibold transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vendor 3: Photo -->
+                <div class="vendor-card bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition group" data-category="photo">
+                    <div class="relative h-48 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80" 
+                             alt="Wedding Couple Photography" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/ecfdf5/065f46?text=Wedding+Photo'">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-bold text-stone-800 px-2.5 py-1 rounded-full">Photo & Cinema</span>
+                        <span class="absolute bottom-3 right-3 bg-stone-900/80 text-white text-xs font-semibold px-2 py-0.5 rounded">Battambang / SR</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-stone-900 font-serif">Angkor Light Studios</h3>
+                                <p class="text-xs text-stone-500 font-khmer">ថតរូប មនោសញ្ចេតនា</p>
+                            </div>
+                            <div class="flex items-center text-xs text-amber-500 font-bold">
+                                <i class="fa-solid fa-star mr-1"></i>5.0
+                            </div>
+                        </div>
+                        <p class="text-xs text-stone-600 line-clamp-2">Candid photojournalism capturing raw emotion during the monk blessings and romantic temple-backdrop golden hour.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-stone-100">
+                            <div>
+                                <span class="text-[11px] text-stone-400">Full Day Shoot</span>
+                                <p class="text-sm font-bold text-deep-rose price-tag" data-usd="390">$390 / full day</p>
+                            </div>
+                            <button onclick="openVendorModal('Angkor Light Studios', 'Photography & Video', 390, 'Battambang / Siem Reap')" class="px-3 py-1.5 rounded-full bg-stone-100 hover:bg-rose-50 hover:text-deep-rose text-xs font-semibold transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vendor 4: Decor -->
+                <div class="vendor-card bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition group" data-category="decor">
+                    <div class="relative h-48 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" 
+                             alt="Floral Wedding Arch" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/fdf2f8/831843?text=Floral+Decor'">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-bold text-stone-800 px-2.5 py-1 rounded-full">Decor & Canopy</span>
+                        <span class="absolute bottom-3 right-3 bg-stone-900/80 text-white text-xs font-semibold px-2 py-0.5 rounded">Siem Reap</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-stone-900 font-serif">Phka Chhouk Floral Concepts</h3>
+                                <p class="text-xs text-stone-500 font-khmer">ផ្កាឈូក រចនាម៉ូត</p>
+                            </div>
+                            <div class="flex items-center text-xs text-amber-500 font-bold">
+                                <i class="fa-solid fa-star mr-1"></i>4.88
+                            </div>
+                        </div>
+                        <p class="text-xs text-stone-600 line-clamp-2">Eco-friendly fresh lotus, jasmine, and local palm leaf installations tailored for garden or private villa venues.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-stone-100">
+                            <div>
+                                <span class="text-[11px] text-stone-400">Complete Arch</span>
+                                <p class="text-sm font-bold text-deep-rose price-tag" data-usd="320">$320 / package</p>
+                            </div>
+                            <button onclick="openVendorModal('Phka Chhouk Floral Concepts', 'Decor & Floristry', 320, 'Siem Reap')" class="px-3 py-1.5 rounded-full bg-stone-100 hover:bg-rose-50 hover:text-deep-rose text-xs font-semibold transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vendor 5: Traditional Rites / Music -->
+                <div class="vendor-card bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition group" data-category="music">
+                    <div class="relative h-48 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" 
+                             alt="Traditional Khmer Instruments" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/f8fafc/0f172a?text=Traditional+Music'">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-bold text-stone-800 px-2.5 py-1 rounded-full">Rites & Pinpeat</span>
+                        <span class="absolute bottom-3 right-3 bg-stone-900/80 text-white text-xs font-semibold px-2 py-0.5 rounded">All Cities</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-stone-900 font-serif">Lok Ta Chea Rites & Pinpeat</h3>
+                                <p class="text-xs text-stone-500 font-khmer">វង់ភ្លេងបុរាណ និងអាចារ្យ</p>
+                            </div>
+                            <div class="flex items-center text-xs text-amber-500 font-bold">
+                                <i class="fa-solid fa-star mr-1"></i>5.0
+                            </div>
+                        </div>
+                        <p class="text-xs text-stone-600 line-clamp-2">Respected master Achar with complete sacred ceremonial gear (slap het, areca nuts) and melodic live traditional Pinpeat ensemble.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-stone-100">
+                            <div>
+                                <span class="text-[11px] text-stone-400">Master + 4 Musicians</span>
+                                <p class="text-sm font-bold text-deep-rose price-tag" data-usd="240">$240 / day</p>
+                            </div>
+                            <button onclick="openVendorModal('Lok Ta Chea Rites & Pinpeat', 'Rites & Pinpeat', 240, 'Siem Reap / Battambang')" class="px-3 py-1.5 rounded-full bg-stone-100 hover:bg-rose-50 hover:text-deep-rose text-xs font-semibold transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vendor 6: Venue -->
+                <div class="vendor-card bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition group" data-category="decor">
+                    <div class="relative h-48 overflow-hidden bg-stone-100">
+                        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80" 
+                             alt="Boutique Garden Resort" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/e0e7ff/3730a3?text=Garden+Resort'">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-bold text-stone-800 px-2.5 py-1 rounded-full">Boutique Venue</span>
+                        <span class="absolute bottom-3 right-3 bg-stone-900/80 text-white text-xs font-semibold px-2 py-0.5 rounded">Siem Reap</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-stone-900 font-serif">Sala Romdoul Heritage Villa</h3>
+                                <p class="text-xs text-stone-500 font-khmer">សាលារំដួល សៀមរាប</p>
+                            </div>
+                            <div class="flex items-center text-xs text-amber-500 font-bold">
+                                <i class="fa-solid fa-star mr-1"></i>4.92
+                            </div>
+                        </div>
+                        <p class="text-xs text-stone-600 line-clamp-2">Lush tropical garden with wooden traditional Khmer houses, poolside dinner terrace, and bridal prep suites.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-stone-100">
+                            <div>
+                                <span class="text-[11px] text-stone-400">Full Day Exclusive</span>
+                                <p class="text-sm font-bold text-deep-rose price-tag" data-usd="550">$550 / day</p>
+                            </div>
+                            <button onclick="openVendorModal('Sala Romdoul Heritage Villa', 'Venue Rental', 550, 'Siem Reap')" class="px-3 py-1.5 rounded-full bg-stone-100 hover:bg-rose-50 hover:text-deep-rose text-xs font-semibold transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Couple's CRM & Guestlist Management Dashboard -->
+    <section id="crm" class="py-16 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">Interactive Planning CRM</span>
+                    <h2 class="text-3xl font-serif font-bold text-stone-900 mt-2">Your Live Wedding Command Center</h2>
+                    <p class="text-sm text-stone-600 mt-1">Track RSVPs, manage family tables, and monitor sacred ceremonial milestones in one place.</p>
+                </div>
+                <div class="flex items-center space-x-3 text-xs bg-cream p-2 rounded-2xl border border-stone-200">
+                    <span class="text-stone-500">Demo Couple:</span>
+                    <strong class="text-stone-800">Sophea & Piseth (Phnom Penh ➔ Siem Reap)</strong>
+                    <span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold">Nov 2026</span>
+                </div>
+            </div>
+
+            <!-- CRM Tabs & Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Left: Checklist & Milestones -->
+                <div class="lg:col-span-5 bg-cream rounded-3xl p-6 border border-stone-200 space-y-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-serif font-bold text-stone-900 text-lg">Khmer Wedding Checklist</h3>
+                        <span id="checklist-counter" class="text-xs font-bold text-deep-rose bg-rose-50 px-2.5 py-1 rounded-full border border-rose-100">4 / 7 Complete</span>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-stone-200 rounded-full h-2">
+                        <div id="checklist-progress" class="bg-gradient-to-r from-deep-rose to-cambodia-gold h-2 rounded-full transition-all duration-500" style="width: 57%;"></div>
+                    </div>
+
+                    <!-- Interactive Checklist Items -->
+                    <div class="space-y-2.5 text-xs" id="checklist-container">
+                        <label class="flex items-center p-3 rounded-xl bg-white border border-stone-200 cursor-pointer hover:bg-rose-50/40 transition">
+                            <input type="checkbox" checked onchange="updateChecklist(this)" class="rounded text-deep-rose focus:ring-deep-rose w-4 h-4">
+                            <div class="ml-3">
+                                <span class="font-bold text-stone-900 block">Consult Astrologer (Chong Choleam)</span>
+                                <span class="text-stone-500 text-[11px]">Determine auspicious date & time for morning rites</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-3 rounded-xl bg-white border border-stone-200 cursor-pointer hover:bg-rose-50/40 transition">
+                            <input type="checkbox" checked onchange="updateChecklist(this)" class="rounded text-deep-rose focus:ring-deep-rose w-4 h-4">
+                            <div class="ml-3">
+                                <span class="font-bold text-stone-900 block">Lock in Siem Reap Heritage Package</span>
+                                <span class="text-stone-500 text-[11px]">Save 30% deposit with Mongkul Serei escrow</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-3 rounded-xl bg-white border border-stone-200 cursor-pointer hover:bg-rose-50/40 transition">
+                            <input type="checkbox" checked onchange="updateChecklist(this)" class="rounded text-deep-rose focus:ring-deep-rose w-4 h-4">
+                            <div class="ml-3">
+                                <span class="font-bold text-stone-900 block">Traditional Attire Fitting</span>
+                                <span class="text-stone-500 text-[11px]">Select gold & deep ruby Sampot Chang Kben</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-3 rounded-xl bg-white border border-stone-200 cursor-pointer hover:bg-rose-50/40 transition">
+                            <input type="checkbox" checked onchange="updateChecklist(this)" class="rounded text-deep-rose focus:ring-deep-rose w-4 h-4">
+                            <div class="ml-3">
+                                <span class="font-bold text-stone-900 block">Monks Invitation & Dana Preparations</span>
+                                <span class="text-stone-500 text-[11px]">5 Monks from Wat Bo temple confirmed</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-3 rounded-xl bg-white border border-stone-200 cursor-pointer hover:bg-rose-50/40 transition">
+                            <input type="checkbox" onchange="updateChecklist(this)" class="rounded text-deep-rose focus:ring-deep-rose w-4 h-4">
+                            <div class="ml-3">
+                                <span class="font-bold text-stone-900 block">Procession Fruit Baskets (Pithi Hae Neak Ta)</span>
+                                <span class="text-stone-500 text-[11px]">Arrange 36 fruit trays and traditional areca nuts</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-3 rounded-xl bg-white border border-stone-200 cursor-pointer hover:bg-rose-50/40 transition">
+                            <input type="checkbox" onchange="updateChecklist(this)" class="rounded text-deep-rose focus:ring-deep-rose w-4 h-4">
+                            <div class="ml-3">
+                                <span class="font-bold text-stone-900 block">Phnom Penh / Battambang Guest Vans</span>
+                                <span class="text-stone-500 text-[11px]">Book family shared bus transport</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-3 rounded-xl bg-white border border-stone-200 cursor-pointer hover:bg-rose-50/40 transition">
+                            <input type="checkbox" onchange="updateChecklist(this)" class="rounded text-deep-rose focus:ring-deep-rose w-4 h-4">
+                            <div class="ml-3">
+                                <span class="font-bold text-stone-900 block">Finalize Seating Chart & Envelope Box</span>
+                                <span class="text-stone-500 text-[11px]">Assign tables for elder relatives and colleagues</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Right: Live RSVP & Guestlist CRM -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-6 border border-stone-200 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-stone-100 pb-3">
+                            <div>
+                                <h3 class="font-serif font-bold text-stone-900 text-lg">Guestlist & Envelope Manager</h3>
+                                <p class="text-xs text-stone-500">Track attending family, table seatings, and expected envelopes.</p>
+                            </div>
+                            <!-- Quick Summary Pills -->
+                            <div class="flex items-center space-x-2 text-xs">
+                                <span class="bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full border border-emerald-200 font-semibold" id="rsvp-confirmed-count">14 Confirmed</span>
+                                <span class="bg-amber-50 text-amber-700 px-2.5 py-1 rounded-full border border-amber-200 font-semibold" id="rsvp-pending-count">3 Pending</span>
+                            </div>
+                        </div>
+
+                        <!-- Add Guest Quick Bar -->
+                        <form id="add-guest-form" onsubmit="addGuest(event)" class="grid grid-cols-1 sm:grid-cols-12 gap-2 bg-stone-50 p-3 rounded-2xl border border-stone-200">
+                            <input type="text" id="new-guest-name" placeholder="Guest Name (e.g., Lok Ta Sokha)" required class="sm:col-span-5 text-xs p-2 rounded-lg border border-stone-300 bg-white">
+                            <select id="new-guest-city" class="sm:col-span-3 text-xs p-2 rounded-lg border border-stone-300 bg-white">
+                                <option value="Phnom Penh">Phnom Penh</option>
+                                <option value="Battambang">Battambang</option>
+                                <option value="Siem Reap">Siem Reap</option>
+                                <option value="Kampong Cham">Kampong Cham</option>
+                            </select>
+                            <select id="new-guest-table" class="sm:col-span-2 text-xs p-2 rounded-lg border border-stone-300 bg-white">
+                                <option value="Table 1 (VIP)">Table 1</option>
+                                <option value="Table 2">Table 2</option>
+                                <option value="Table 3">Table 3</option>
+                                <option value="Table 4">Table 4</option>
+                            </select>
+                            <button type="submit" class="sm:col-span-2 bg-deep-rose hover:bg-rose-800 text-white rounded-lg text-xs font-semibold py-2 transition">
+                                + Add
+                            </button>
+                        </form>
+
+                        <!-- Guest List Table -->
+                        <div class="overflow-x-auto max-h-72 custom-scrollbar">
+                            <table class="w-full text-left text-xs text-stone-700">
+                                <thead class="bg-stone-50 text-stone-500 uppercase text-[10px] sticky top-0">
+                                    <tr>
+                                        <th class="py-2.5 px-3">Guest Name</th>
+                                        <th class="py-2.5 px-2">Origin</th>
+                                        <th class="py-2.5 px-2">Table</th>
+                                        <th class="py-2.5 px-2">Status</th>
+                                        <th class="py-2.5 px-2 text-right">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="guest-table-body" class="divide-y divide-stone-100">
+                                    <!-- Dynamic rows loaded by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Bar -->
+                    <div class="pt-4 border-t border-stone-100 flex flex-wrap items-center justify-between text-xs text-stone-500 gap-2">
+                        <span class="flex items-center space-x-1">
+                            <i class="fa-solid fa-lock text-stone-400"></i>
+                            <span>Private couple dashboard synced with wedding planner</span>
+                        </span>
+                        <button onclick="exportGuestList()" class="px-3 py-1.5 rounded-lg border border-stone-200 hover:bg-stone-50 text-stone-700 font-medium transition flex items-center space-x-1.5">
+                            <i class="fa-solid fa-download text-stone-400"></i>
+                            <span>Download CSV</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cambodian Cultural Traditions & Budget Wisdom -->
+    <section id="traditions" class="py-16 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-cambodia-gold bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">Sacred Rituals & Etiquette</span>
+                <h2 class="text-3xl font-serif font-bold text-stone-900 mt-2">Honor Tradition Without Overspending</h2>
+                <p class="text-sm text-stone-600 mt-1">
+                    Cambodian parents value authenticity and merit (<span class="font-khmer font-medium">បុណ្យកុសល</span>) far more than lavish ballroom rentals. Here is how we preserve each sacred rite gracefully.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-2xs space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-50 text-deep-rose flex items-center justify-center text-xl font-serif font-bold">
+                        ១
+                    </div>
+                    <h3 class="text-base font-bold text-stone-900 font-serif">Pithi Hae Neak Ta (ជំនូនផ្លែឈើ)</h3>
+                    <p class="text-xs text-stone-500 font-khmer">ពិធីហែជំនូន និងផ្លែឈើ ៣៦ មុខ</p>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        The groom’s morning procession bringing seasonal fruits. Instead of imported expensive fruits, we source sweet Siem Reap mangoes, Battambang oranges, and Kampot bananas presented in handwoven artisan rattan trays.
+                    </p>
+                    <div class="pt-2 text-[11px] font-semibold text-emerald-600">
+                        <i class="fa-solid fa-lightbulb mr-1"></i>Saves ~$350 in packaging & import costs
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-2xs space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-cambodia-gold flex items-center justify-center text-xl font-serif font-bold">
+                        ២
+                    </div>
+                    <h3 class="text-base font-bold text-stone-900 font-serif">Pithi Kat Sok (កាត់សក់បង្កក់សិរី)</h3>
+                    <p class="text-xs text-stone-500 font-khmer">ពិធីកាត់សក់សម្អាតស្នេហ៍</p>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        The symbolic hair-cutting rite representing purification and cleansing past karma. Our experienced Achars craft a joyful, witty performance that delights elderly relatives while maintaining deep spiritual sanctity.
+                    </p>
+                    <div class="pt-2 text-[11px] font-semibold text-emerald-600">
+                        <i class="fa-solid fa-lightbulb mr-1"></i>Includes traditional silver mirrors & perfumed water
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-2xs space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-50 text-deep-rose flex items-center justify-center text-xl font-serif font-bold">
+                        ៣
+                    </div>
+                    <h3 class="text-base font-bold text-stone-900 font-serif">Sompeah Ptem (សំពះផ្ទឹម)</h3>
+                    <p class="text-xs text-stone-500 font-khmer">ពិធីចងដៃ និងបង្វិលពពិល</p>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        The red thread tying and passing of candle blessings. Held beneath our open-air wooden gazebo in Siem Reap, this sacred rite connects generations without requiring an expensive air-conditioned hotel ballroom.
+                    </p>
+                    <div class="pt-2 text-[11px] font-semibold text-emerald-600">
+                        <i class="fa-solid fa-lightbulb mr-1"></i>100% natural sacred red string & blessed areca flowers
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Cambodian Couple Testimonials -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-deep-rose bg-rose-100/70 px-3 py-1 rounded-full">Real Cambodian Love Stories</span>
+                <h2 class="text-3xl font-serif font-bold text-stone-900 mt-2">Hear From Couples Who Married Debt-Free</h2>
+                <p class="text-sm text-stone-600 mt-1">
+                    Young professionals who chose a meaningful celebration in Siem Reap instead of starting their married lives with heavy bank loans.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Story 1 -->
+                <div class="bg-cream rounded-3xl p-6 border border-stone-200 flex flex-col justify-between hover:border-amber-300 transition">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-1 text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-stone-700 leading-relaxed italic">
+                            "We both work in digital marketing in Phnom Penh. Our families expected a $12,000 wedding. Mongkul Serei helped us propose a 14-table private resort wedding in Siem Reap for only $3,400. Our parents shed tears of happiness during the Kat Sok rite and all our relatives were amazed by the food!"
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-stone-200/60 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-rose-200 text-deep-rose flex items-center justify-center font-bold text-sm">
+                            V&C
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-stone-900">Vichheka & Chandara (Aged 26 & 28)</h4>
+                            <p class="text-[11px] text-stone-500">Phnom Penh ➔ Siem Reap Resort</p>
+                            <span class="text-[10px] text-emerald-600 font-bold">Saved: $7,800 vs PP Ballroom</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="bg-cream rounded-3xl p-6 border border-stone-200 flex flex-col justify-between hover:border-amber-300 transition">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-1 text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-stone-700 leading-relaxed italic">
+                            "Coming from Battambang, we wanted something elegant but had limited savings. The budget calculator was 100% accurate down to the dollar. The Achar and the live Pinpeat ensemble created such an emotional, respectful atmosphere for the monks' blessing."
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-stone-200/60 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-200 text-amber-900 flex items-center justify-center font-bold text-sm">
+                            K&M
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-stone-900">Kolap & Mengly (Aged 24 & 27)</h4>
+                            <p class="text-[11px] text-stone-500">Battambang Couple</p>
+                            <span class="text-[10px] text-emerald-600 font-bold">Saved: $3,200</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="bg-cream rounded-3xl p-6 border border-stone-200 flex flex-col justify-between hover:border-amber-300 transition">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-1 text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-stone-700 leading-relaxed italic">
+                            "We were terrified of unexpected costs that usually happen with wedding planners. Mongkul Serei guaranteed fixed pricing and coordinated our guest shuttle bus from Phnom Penh effortlessly. We started our new house fund with the money saved!"
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-stone-200/60 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-900 flex items-center justify-center font-bold text-sm">
+                            S&T
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-stone-900">Sreypov & Theara (Aged 29 & 31)</h4>
+                            <p class="text-[11px] text-stone-500">Bank Officer & Teacher</p>
+                            <span class="text-[10px] text-emerald-600 font-bold">Saved: $4,500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Consultation Form Section -->
+    <section id="inquire" class="py-16 bg-gradient-to-b from-cream to-blush/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl border border-stone-200 shadow-xl overflow-hidden">
+                <div class="bg-gradient-to-r from-deep-rose to-stone-900 px-6 py-8 text-white text-center">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-cambodia-gold">No Pressure Free Consultation</span>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold mt-1">Let’s Plan Your Dream Wedding Within Budget</h2>
+                    <p class="text-xs sm:text-sm text-stone-300 mt-2 max-w-xl mx-auto">
+                        Speak with our local wedding planners in Phnom Penh or Siem Reap. We will calculate your exact costs and suggest the best dates based on the Khmer Lunar Calendar.
+                    </p>
+                </div>
+
+                <form id="weddingInquiryForm" onsubmit="handleInquirySubmit(event)" class="p-6 sm:p-8 space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Bride & Groom Names *</label>
+                            <input type="text" id="form-names" required placeholder="e.g. Bopha & Chann" class="w-full text-xs sm:text-sm p-3 rounded-xl border border-stone-300 focus:outline-none focus:border-deep-rose">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Telegram / Phone Number *</label>
+                            <input type="tel" id="form-phone" required placeholder="e.g. +855 12 345 678" class="w-full text-xs sm:text-sm p-3 rounded-xl border border-stone-300 focus:outline-none focus:border-deep-rose">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Your Current City *</label>
+                            <select id="form-city" class="w-full text-xs sm:text-sm p-3 rounded-xl border border-stone-300 focus:outline-none focus:border-deep-rose">
+                                <option value="Phnom Penh">Phnom Penh</option>
+                                <option value="Battambang">Battambang</option>
+                                <option value="Siem Reap">Siem Reap</option>
+                                <option value="Kampong Cham">Kampong Cham</option>
+                                <option value="Other Province">Other Province</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Estimated Wedding Date</label>
+                            <input type="date" id="form-date" value="2026-11-20" class="w-full text-xs sm:text-sm p-3 rounded-xl border border-stone-300 focus:outline-none focus:border-deep-rose">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Target Budget Range</label>
+                            <select id="form-budget" class="w-full text-xs sm:text-sm p-3 rounded-xl border border-stone-300 focus:outline-none focus:border-deep-rose">
+                                <option value="Under $2,500">Under $2,500 (10M KHR)</option>
+                                <option value="$2,500 - $3,500" selected>$2,500 - $3,500 (10M - 14M KHR)</option>
+                                <option value="$3,500 - $5,000">$3,500 - $5,000 (14M - 20M KHR)</option>
+                                <option value="$5,000+">$5,000+ (20M+ KHR)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Preferred Setting in Siem Reap</label>
+                            <select id="form-setting" class="w-full text-xs sm:text-sm p-3 rounded-xl border border-stone-300 focus:outline-none focus:border-deep-rose">
+                                <option value="Tropical Garden / Private Villa">Lush Private Garden Villa</option>
+                                <option value="Boutique Heritage Resort">Boutique Heritage Resort</option>
+                                <option value="Couple's Hometown / Family Property">Family Home Tent Setup</option>
+                                <option value="Open Air Riverfront">Open Air Riverfront</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Approx. Number of Tables</label>
+                            <select id="form-tables" class="w-full text-xs sm:text-sm p-3 rounded-xl border border-stone-300 focus:outline-none focus:border-deep-rose">
+                                <option value="5-8 Tables (50-80 Guests)">5-8 Tables (50-80 Guests)</option>
+                                <option value="9-15 Tables (90-150 Guests)" selected>9-15 Tables (90-150 Guests)</option>
+                                <option value="16-25 Tables (160-250 Guests)">16-25 Tables (160-250 Guests)</option>
+                                <option value="26+ Tables (260+ Guests)">26+ Tables (Grand provincial)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 uppercase mb-1">Ceremonies or Special Requests</label>
+                        <textarea id="form-notes" rows="3" placeholder="Tell us if you need guest transportation from Phnom Penh, special monk invitations, or specific dietary catering..." class="w-full text-xs sm:text-sm p-3 rounded-xl border border-stone-300 focus:outline-none focus:border-deep-rose"></textarea>
+                    </div>
+
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" id="form-agree" checked required class="rounded text-deep-rose focus:ring-deep-rose">
+                        <label for="form-agree" class="text-xs text-stone-600">I would like a free Telegram consultation and customized itemized PDF quote.</label>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-full bg-deep-rose hover:bg-rose-800 text-white font-bold text-sm tracking-wide transition shadow-lg flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-telegram text-lg"></i>
+                        <span>Submit Free Wedding Inquiry</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-stone-900 text-stone-300 pt-16 pb-12 border-t border-stone-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Col 1: About -->
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 rounded-full bg-cambodia-gold flex items-center justify-center text-stone-900 font-bold">
+                            <i class="fa-solid fa-ring"></i>
+                        </div>
+                        <span class="font-serif font-bold text-lg text-white">Mongkul Serei</span>
+                    </div>
+                    <p class="text-stone-400 text-xs leading-relaxed">
+                        Democratizing sacred Cambodian wedding celebrations. Helping working couples wed with timeless cultural dignity and financial peace of mind.
+                    </p>
+                    <div class="flex items-center space-x-3 pt-2 text-stone-400">
+                        <a href="#" class="w-8 h-8 rounded-full bg-stone-800 hover:bg-deep-rose flex items-center justify-center transition text-white"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-stone-800 hover:bg-deep-rose flex items-center justify-center transition text-white"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-stone-800 hover:bg-deep-rose flex items-center justify-center transition text-white"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Hubs -->
+                <div class="space-y-2">
+                    <h4 class="text-white font-serif font-bold text-sm">Consultation Hubs</h4>
+                    <p class="text-stone-300 font-semibold">Phnom Penh Office:</p>
+                    <p class="text-stone-400">Street 288, BKK1, Chamkarmon, Phnom Penh</p>
+                    <p class="text-stone-300 font-semibold pt-2">Siem Reap Operations:</p>
+                    <p class="text-stone-400">Wat Bo Village, Sala Kamreuk, Siem Reap</p>
+                    <p class="text-stone-400 pt-1"><i class="fa-solid fa-phone mr-1 text-cambodia-gold"></i> +855 (0) 23 888 920</p>
+                </div>
+
+                <!-- Col 3: Popular Packages -->
+                <div class="space-y-2">
+                    <h4 class="text-white font-serif font-bold text-sm">Popular Packages</h4>
+                    <ul class="space-y-1.5 text-stone-400">
+                        <li><a href="#packages" class="hover:text-white transition">Romdoul Essential ($1,899)</a></li>
+                        <li><a href="#packages" class="hover:text-white transition">Angkor Heritage Bliss ($3,299)</a></li>
+                        <li><a href="#packages" class="hover:text-white transition">Golden Jasmine Grand ($4,950)</a></li>
+                        <li><a href="#calculator" class="hover:text-white transition">Custom Table Estimator</a></li>
+                        <li><a href="#crm" class="hover:text-white transition">Free Couple's RSVP Manager</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Debt-Free Promise -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-serif font-bold text-sm">Our Debt-Free Promise</h4>
+                    <p class="text-stone-400 leading-relaxed">
+                        We pledge fixed vendor rates, escrow protection for deposits, and 0% surprise fees on the wedding day. Your married life should begin with savings, not distress.
+                    </p>
+                    <div class="p-3 bg-stone-800/80 rounded-xl border border-stone-700 flex items-center space-x-2.5">
+                        <i class="fa-solid fa-shield-heart text-cambodia-gold text-xl"></i>
+                        <span class="text-[11px] text-stone-300">100% Khmer cultural ceremony certified by venerable local Achars.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-stone-500 text-[11px]">
+                <p>&copy; 2026 Mongkul Serei Weddings Co., Ltd. All Rights Reserved.</p>
+                <div class="flex space-x-4 mt-2 sm:mt-0">
+                    <a href="#" class="hover:text-stone-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-stone-400">Terms of Service</a>
+                    <a href="#" class="hover:text-stone-400">Cultural Guidelines</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Vendor Details & Booking Inquiry -->
+    <div id="vendorModal" class="fixed inset-0 z-50 hidden bg-stone-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl relative border border-stone-200 animate-in fade-in zoom-in duration-200">
+            <button onclick="closeVendorModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="space-y-4">
+                <div class="inline-block px-2.5 py-0.5 rounded-full bg-rose-50 text-deep-rose text-[11px] font-bold" id="modal-vendor-category">Category</div>
+                <h3 class="text-xl font-serif font-bold text-stone-900" id="modal-vendor-name">Vendor Name</h3>
+                <p class="text-xs text-stone-500" id="modal-vendor-location"><i class="fa-solid fa-location-dot mr-1"></i>Location</p>
+
+                <div class="p-4 bg-cream rounded-2xl border border-stone-200">
+                    <div class="flex justify-between items-baseline">
+                        <span class="text-xs text-stone-600">Standard Starting Rate:</span>
+                        <span class="text-xl font-bold font-serif text-deep-rose" id="modal-vendor-price">$0</span>
+                    </div>
+                    <p class="text-[11px] text-stone-500 mt-1">Includes direct platform insurance and date reservation guarantee.</p>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="block text-xs font-bold text-stone-700 uppercase">Your Name & Wedding Date</label>
+                    <input type="text" id="modal-booking-name" placeholder="Your Name" class="w-full text-xs p-2.5 rounded-xl border border-stone-300">
+                    <input type="date" id="modal-booking-date" value="2026-11-20" class="w-full text-xs p-2.5 rounded-xl border border-stone-300">
+                </div>
+
+                <div class="flex space-x-3 pt-2">
+                    <button onclick="confirmVendorBooking()" class="flex-1 py-3 rounded-full bg-deep-rose hover:bg-rose-800 text-white font-bold text-xs uppercase tracking-wider transition">
+                        Request Availability
+                    </button>
+                    <button onclick="closeVendorModal()" class="px-5 py-3 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 font-semibold text-xs transition">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast Box (No alerts!) -->
+    <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 max-w-sm w-full">
+        <div class="bg-stone-900 text-white p-4 rounded-2xl shadow-2xl border border-cambodia-gold flex items-start space-x-3">
+            <div id="toastIcon" class="text-cambodia-gold text-lg mt-0.5">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="flex-1 text-xs">
+                <h5 id="toastTitle" class="font-bold text-white">Notification</h5>
+                <p id="toastMessage" class="text-stone-300 mt-0.5">Your action has been processed successfully.</p>
+            </div>
+            <button onclick="hideToast()" class="text-stone-400 hover:text-white">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Application State & Interactive Logic -->
+    <script>
+        // State variables
+        let currentCurrency = 'USD';
+        const exchangeRate = 4100; // 1 USD = 4,100 Cambodian Riel
+
+        // Guest List CRM initial mock data
+        let guests = [
+            { id: 1, name: 'Lok Ta Sokha & Family', city: 'Battambang', table: 'Table 1 (VIP)', status: 'Confirmed' },
+            { id: 2, name: 'Om Narith (Uncle)', city: 'Phnom Penh', table: 'Table 1 (VIP)', status: 'Confirmed' },
+            { id: 3, name: 'Kosal & Sophy (Colleagues)', city: 'Phnom Penh', table: 'Table 2', status: 'Confirmed' },
+            { id: 4, name: 'Bong Rathana', city: 'Siem Reap', table: 'Table 3', status: 'Pending' },
+            { id: 5, name: 'Dara & Chenda', city: 'Kampong Cham', table: 'Table 2', status: 'Confirmed' }
+        ];
+
+        // Format Currency Helper
+        function formatPrice(usdAmount) {
+            if (currentCurrency === 'USD') {
+                return '$' + Math.round(usdAmount).toLocaleString();
+            } else {
+                return (Math.round(usdAmount * exchangeRate)).toLocaleString() + ' ៛';
+            }
+        }
+
+        // Switch Global Currency
+        function setCurrency(curr) {
+            currentCurrency = curr;
+            const btnUsd = document.getElementById('curr-usd');
+            const btnKhr = document.getElementById('curr-khr');
+
+            if (curr === 'USD') {
+                btnUsd.className = 'px-1.5 py-0.5 rounded text-[11px] font-bold bg-amber-400 text-stone-900 transition shadow-xs';
+                btnKhr.className = 'px-1.5 py-0.5 rounded text-[11px] font-medium text-stone-300 hover:text-white transition';
+            } else {
+                btnKhr.className = 'px-1.5 py-0.5 rounded text-[11px] font-bold bg-amber-400 text-stone-900 transition shadow-xs';
+                btnUsd.className = 'px-1.5 py-0.5 rounded text-[11px] font-medium text-stone-300 hover:text-white transition';
+            }
+
+            // Update all price tags throughout the page
+            document.querySelectorAll('.price-tag').forEach(el => {
+                const usd = parseFloat(el.getAttribute('data-usd'));
+                if (!isNaN(usd)) {
+                    el.textContent = formatPrice(usd);
+                }
+            });
+
+            // Recalculate calculator display
+            calculateBudget();
+            showToast('Currency Updated', `Values switched to ${curr === 'USD' ? 'US Dollars ($)' : 'Cambodian Riel (៛)'}`);
+        }
+
+        // Mobile Menu Drawer Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Interactive Wedding Budget Calculator
+        function calculateBudget() {
+            const tables = parseInt(document.getElementById('calc-tables').value, 10);
+            const guestsCount = tables * 10;
+            const cateringPerTable = parseFloat(document.getElementById('calc-catering-tier').value);
+            const ceremonyType = document.querySelector('input[name="ceremony_type"]:checked').value;
+
+            // Optional add-ons
+            const hasVideo = document.getElementById('addon-video').checked;
+            const hasMusic = document.getElementById('addon-music').checked;
+            const hasBus = document.getElementById('addon-bus').checked;
+            const hasMakeup = document.getElementById('addon-makeup').checked;
+
+            // Calculations
+            const cateringCost = tables * cateringPerTable;
+            const venueCost = tables > 15 ? 650 : 450;
+            const ceremonyCost = ceremonyType === 'morning_evening' ? 520 : 180;
+            
+            let addonsCost = 0;
+            if (hasVideo) addonsCost += 280;
+            if (hasMusic) addonsCost += 220;
+            if (hasBus) addonsCost += 320;
+            if (hasMakeup) addonsCost += 160;
+
+            const coordinationCost = 250;
+            const total = cateringCost + venueCost + ceremonyCost + addonsCost + coordinationCost;
+            
+            // Standard traditional ballroom market comparison
+            const marketEstimate = (tables * 280) + 1200 + 800 + 600; 
+            const savings = Math.max(0, marketEstimate - total);
+            const savingsPercent = Math.round((savings / marketEstimate) * 100);
+
+            // Update DOM
+            document.getElementById('calc-table-display').textContent = tables;
+            document.getElementById('calc-guest-display').textContent = guestsCount;
+            document.getElementById('calc-table-sub').textContent = tables;
+
+            document.getElementById('cost-catering').textContent = formatPrice(cateringCost);
+            document.getElementById('cost-venue').textContent = formatPrice(venueCost);
+            document.getElementById('cost-ceremony').textContent = formatPrice(ceremonyCost);
+            document.getElementById('cost-addons').textContent = formatPrice(addonsCost);
+            document.getElementById('cost-coord').textContent = formatPrice(coordinationCost);
+
+            document.getElementById('total-cost').textContent = formatPrice(total);
+            document.getElementById('market-cost').textContent = formatPrice(marketEstimate);
+            document.getElementById('total-savings').textContent = `${formatPrice(savings)} (${savingsPercent}%)`;
+        }
+
+        // Apply Calculator Result to Inquiry Form
+        function applyCalculatorToInquiry() {
+            const tables = document.getElementById('calc-tables').value;
+            const totalText = document.getElementById('total-cost').textContent;
+
+            const inquirySection = document.getElementById('inquire');
+            inquirySection.scrollIntoView({ behavior: 'smooth' });
+
+            const notesField = document.getElementById('form-notes');
+            notesField.value = `Estimated via Budget Calculator: ${tables} tables (~${tables*10} guests). Calculated budget estimate: ${totalText}.`;
+            showToast('Budget Saved to Inquiry', 'Your estimated table count and budget have been added to the consultation form below.');
+        }
+
+        // Quick Select Pre-made Package
+        function selectPackage(pkgName, usdPrice) {
+            const inquirySection = document.getElementById('inquire');
+            inquirySection.scrollIntoView({ behavior: 'smooth' });
+
+            const notesField = document.getElementById('form-notes');
+            notesField.value = `Interested in the "${pkgName}" package (${formatPrice(usdPrice)}). Looking forward to discussing details.`;
+            showToast('Package Selected', `Selected "${pkgName}". Fill out the form below to lock your date!`);
+        }
+
+        // Vendor Marketplace Filters
+        function filterVendors(category) {
+            // Update filter buttons UI
+            document.querySelectorAll('.vendor-filter').forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.className = 'vendor-filter active px-3 py-1.5 rounded-full text-xs font-semibold bg-deep-rose text-white transition';
+                } else {
+                    btn.className = 'vendor-filter px-3 py-1.5 rounded-full text-xs font-semibold text-stone-600 hover:text-stone-900 transition';
+                }
+            });
+
+            // Filter vendor cards
+            document.querySelectorAll('.vendor-card').forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Vendor Modal Logic
+        let activeVendor = {};
+        function openVendorModal(name, category, priceUSD, location) {
+            activeVendor = { name, category, priceUSD, location };
+            document.getElementById('modal-vendor-name').textContent = name;
+            document.getElementById('modal-vendor-category').textContent = category;
+            document.getElementById('modal-vendor-location').innerHTML = `<i class="fa-solid fa-location-dot mr-1"></i>${location}`;
+            document.getElementById('modal-vendor-price').textContent = formatPrice(priceUSD);
+
+            document.getElementById('vendorModal').classList.remove('hidden');
+        }
+
+        function closeVendorModal() {
+            document.getElementById('vendorModal').classList.add('hidden');
+        }
+
+        function confirmVendorBooking() {
+            const clientName = document.getElementById('modal-booking-name').value.trim();
+            if (!clientName) {
+                showToast('Notice', 'Please enter your name before requesting availability.', 'warning');
+                return;
+            }
+            closeVendorModal();
+            showToast('Inquiry Dispatched', `Your date request for ${activeVendor.name} has been sent to our Siem Reap coordinator.`);
+        }
+
+        // CRM Checklist Handler
+        function updateChecklist() {
+            const container = document.getElementById('checklist-container');
+            const total = container.querySelectorAll('input[type="checkbox"]').length;
+            const checked = container.querySelectorAll('input[type="checkbox"]:checked').length;
+            const percent = Math.round((checked / total) * 100);
+
+            document.getElementById('checklist-counter').textContent = `${checked} / ${total} Complete`;
+            document.getElementById('checklist-progress').style.width = `${percent}%`;
+
+            if (checked === total) {
+                showToast('Congratulations!', 'All wedding milestones are checked off! You are ceremony ready.');
+            }
+        }
+
+        // CRM Guest List Manager
+        function renderGuestList() {
+            const tbody = document.getElementById('guest-table-body');
+            tbody.innerHTML = '';
+
+            let confirmed = 0;
+            let pending = 0;
+
+            guests.forEach((g) => {
+                if (g.status === 'Confirmed') confirmed++;
+                else pending++;
+
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-stone-50/80 transition';
+                tr.innerHTML = `
+                    <td class="py-2.5 px-3 font-semibold text-stone-900">${g.name}</td>
+                    <td class="py-2.5 px-2 text-stone-500">${g.city}</td>
+                    <td class="py-2.5 px-2"><span class="px-2 py-0.5 rounded bg-stone-100 text-[10px] font-medium">${g.table}</span></td>
+                    <td class="py-2.5 px-2">
+                        <button onclick="toggleGuestStatus(${g.id})" class="px-2 py-0.5 rounded-full text-[10px] font-bold ${g.status === 'Confirmed' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">
+                            ${g.status}
+                        </button>
+                    </td>
+                    <td class="py-2.5 px-2 text-right">
+                        <button onclick="removeGuest(${g.id})" class="text-stone-400 hover:text-rose-600 transition p-1">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById('rsvp-confirmed-count').textContent = `${confirmed} Confirmed`;
+            document.getElementById('rsvp-pending-count').textContent = `${pending} Pending`;
+        }
+
+        function addGuest(e) {
+            e.preventDefault();
+            const nameInput = document.getElementById('new-guest-name');
+            const cityInput = document.getElementById('new-guest-city');
+            const tableInput = document.getElementById('new-guest-table');
+
+            if (!nameInput.value.trim()) return;
+
+            const newGuest = {
+                id: Date.now(),
+                name: nameInput.value.trim(),
+                city: cityInput.value,
+                table: tableInput.value,
+                status: 'Confirmed'
+            };
+
+            guests.push(newGuest);
+            nameInput.value = '';
+            renderGuestList();
+            showToast('Guest Added', `${newGuest.name} has been added to ${newGuest.table}.`);
+        }
+
+        function toggleGuestStatus(id) {
+            const guest = guests.find(g => g.id === id);
+            if (guest) {
+                guest.status = guest.status === 'Confirmed' ? 'Pending' : 'Confirmed';
+                renderGuestList();
+                showToast('Status Toggled', `${guest.name} RSVP updated to ${guest.status}.`);
+            }
+        }
+
+        function removeGuest(id) {
+            guests = guests.filter(g => g.id !== id);
+            renderGuestList();
+            showToast('Guest Removed', 'Guest entry removed from your seating chart.');
+        }
+
+        function exportGuestList() {
+            let csvContent = "data:text/csv;charset=utf-8,Name,City,Table,Status\n";
+            guests.forEach(g => {
+                csvContent += `"${g.name}","${g.city}","${g.table}","${g.status}"\n`;
+            });
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "mongkul_serei_guestlist.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast('Export Complete', 'Your guestlist CSV was successfully downloaded.');
+        }
+
+        // Form Submission Handler
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            const names = document.getElementById('form-names').value;
+            const phone = document.getElementById('form-phone').value;
+            const city = document.getElementById('form-city').value;
+
+            // Reset form
+            document.getElementById('weddingInquiryForm').reset();
+
+            showToast(
+                'Inquiry Received! (សួស្តី)',
+                `Thank you ${names}! Our wedding team will contact you at ${phone} via Telegram within 2 business hours.`,
+                'success'
+            );
+        }
+
+        // Custom Toast Notification System
+        let toastTimeout;
+        function showToast(title, message, type = 'success') {
+            const toast = document.getElementById('toastNotification');
+            const toastTitle = document.getElementById('toastTitle');
+            const toastMsg = document.getElementById('toastMessage');
+            const toastIcon = document.getElementById('toastIcon');
+
+            toastTitle.textContent = title;
+            toastMsg.textContent = message;
+
+            if (type === 'warning') {
+                toastIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-amber-400"></i>';
+            } else {
+                toastIcon.innerHTML = '<i class="fa-solid fa-circle-check text-cambodia-gold"></i>';
+            }
+
+            clearTimeout(toastTimeout);
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            toastTimeout = setTimeout(() => {
+                hideToast();
+            }, 5000);
+        }
+
+        function hideToast() {
+            const toast = document.getElementById('toastNotification');
+            toast.classList.remove('translate-y-0', 'opacity-100');
+            toast.classList.add('translate-y-32', 'opacity-0');
+        }
+
+        // Initial setup on window load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderGuestList();
+            calculateBudget();
+        });
+    </script>
+</body>
+</html>
